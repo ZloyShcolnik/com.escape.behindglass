@@ -154,7 +154,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.escape.little.boy
+    Android: com.escape.behindglass
     Standalone: com.DefaultCompany.2DProject
   buildNumber:
     Standalone: 0

@@ -700,7 +700,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.001
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 95.7
   orthographic: 0
@@ -15042,7 +15042,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 860, y: 480}
+  m_SizeDelta: {x: 854, y: 480}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2834010738746748905
 GameObject:
@@ -15055,6 +15055,7 @@ GameObject:
   - component: {fileID: 2834010738746748904}
   - component: {fileID: 2834010738746748906}
   - component: {fileID: 2834010738746748907}
+  - component: {fileID: 2834010738746748908}
   m_Layer: 5
   m_Name: grid
   m_TagString: Untagged
@@ -15082,7 +15083,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 215, y: 160}
+  m_CellSize: {x: 213.5, y: 160}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -15100,6 +15101,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!114 &2834010738746748908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2834010738746748905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b284340b4553b254db3832206185f1e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &2834010738773144741
 Camera:
   m_ObjectHideFlags: 0
@@ -15575,7 +15588,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 854, y: 480}
-  m_ScreenMatchMode: 2
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
