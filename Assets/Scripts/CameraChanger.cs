@@ -12,7 +12,7 @@ public class CameraChanger : MonoBehaviour
     private GameObject latestCam;
 
     private ColorAdjustments colorAdjustmentsValue;
-    private FilmGrain filmGrainValue;
+    [SerializeField] Material canvasNoiseMaterial;
     private Bloom bloomValue;
     private Volume volume;
 
@@ -42,7 +42,6 @@ public class CameraChanger : MonoBehaviour
 
         volume = FindObjectOfType<Volume>();
         volume.profile.TryGet(out colorAdjustmentsValue);
-        volume.profile.TryGet(out filmGrainValue);
         volume.profile.TryGet(out bloomValue);
 
         canvasGroup = FindObjectOfType<CanvasGroup>();
@@ -108,7 +107,7 @@ public class CameraChanger : MonoBehaviour
         roomName.text = roomNameTmp;
 
         colorAdjustmentsValue.contrast.value = -15.0f;
-        filmGrainValue.intensity.value = 0.15f;
+        canvasNoiseMaterial.color = new Color(255, 255, 255, 0.33f);
 
         canvasGroup.alpha = 1.0f;
 
@@ -125,8 +124,7 @@ public class CameraChanger : MonoBehaviour
         latestCam.SetActive(true);
 
         colorAdjustmentsValue.contrast.value = -100.0f;
-        filmGrainValue.intensity.value = 1.0f;
-        filmGrainValue.response.value = 1.0f;
+        canvasNoiseMaterial.color = new Color(255, 255, 255, 1);
 
         grid.SetActive(false);
         showGridBtn.gameObject.SetActive(true);

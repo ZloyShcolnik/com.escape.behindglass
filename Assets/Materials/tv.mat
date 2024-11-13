@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3730124831263493027
+--- !u!114 &-548065863989748611
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SimpleNoise
+  m_Name: tv
   m_Shader: {fileID: -6465566751694194690, guid: 6f165d17370cdc34ebf55bcfb379584d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -90,7 +90,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_1fc4677dd1234632ab4b37248ce316c7: 1000
-    - Vector1_713915e7bb43420d9c187ad8c1841da1: 0.33
+    - Vector1_713915e7bb43420d9c187ad8c1841da1: 1
     - Vector1_cda7364d55914b79969069c17152f284: 10
     - _AlphaClip: 0
     - _Blend: 0
@@ -120,7 +120,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 255, g: 255, b: 255, a: 0.33}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
