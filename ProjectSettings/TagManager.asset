@@ -8,6 +8,7 @@ TagManager:
   - Platform
   - FxTemporaire
   - death
+  - holeManPoint
   layers:
   - Default
   - TransparentFX

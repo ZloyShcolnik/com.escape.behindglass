@@ -6,6 +6,8 @@ public class WallPhoneController : MonoBehaviour
     private int id;
     private bool isReady;
 
+    private bool isCollided;
+
     private GameObject canvas;
     private AudioSource source;
 
@@ -18,7 +20,6 @@ public class WallPhoneController : MonoBehaviour
 
         canvas = GetComponentInChildren<Canvas>().gameObject;
         var btn = canvas.GetComponentInChildren<Button>();
-        canvas.SetActive(false);
 
         source = GetComponent<AudioSource>();
 
@@ -30,8 +31,6 @@ public class WallPhoneController : MonoBehaviour
             var duration = clip.length;
 
             PhoneDialogueSfx.Instant(clip);
-
-            canvas.SetActive(false);
             source.Stop();
 
             id++;
@@ -41,25 +40,25 @@ public class WallPhoneController : MonoBehaviour
         Invoke(nameof(TellMyPhome), Random.Range(75.0f, 120.0f));
     }
 
+    private void Update()
+    {
+        canvas.SetActive(isCollided && isReady);
+    }
+
     private void TellMyPhome()
     {
         source.Play();
         isReady = true;
     }
 
-    private void EnableCanvas()
-    {
-        canvas.SetActive(true);
-    }
-
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (!other.CompareTag("Player") || !isReady)
         {
             return;
         }
 
-        canvas.SetActive(true);
+        isCollided = true;
     }
 
     private void OnTriggerExit(Collider other)
@@ -69,6 +68,6 @@ public class WallPhoneController : MonoBehaviour
             return;
         }
 
-        canvas.SetActive(false);
+        isCollided = false;
     }
 }

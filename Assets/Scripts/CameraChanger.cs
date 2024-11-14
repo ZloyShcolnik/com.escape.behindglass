@@ -106,8 +106,8 @@ public class CameraChanger : MonoBehaviour
         var roomNameTmp = cam2.cullingMask < 0 ? roomNames[camIdValue] : "NO DATA";
         roomName.text = roomNameTmp;
 
-        colorAdjustmentsValue.contrast.value = -15.0f;
-        canvasNoiseMaterial.color = new Color(255, 255, 255, 0.33f);
+        colorAdjustmentsValue.contrast.value = 6.0f;
+        canvasNoiseMaterial.color = new Color(255, 255, 255, 0.3f);
 
         canvasGroup.alpha = 1.0f;
 
@@ -140,7 +140,7 @@ public class CameraChanger : MonoBehaviour
 
     public void TurnElectric(bool isOn)
     {
-        postExplosureTarget = isOn ? 1.3f : -3.5f;
+        postExplosureTarget = isOn ? 1.3f : -2.5f;
         bloomIntencityTarget = isOn ? 0.0f : 0.35f;
 
         if(!isOn)
